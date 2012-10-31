@@ -1,0 +1,30 @@
+CAMPAIGNER
+
+What is campaigner:
+This is just a simple PHP module that can create a box on your website to collectnames and email addresses of supporters. I wrote this because I needed it for my self so I can´t garantee if this is useful for someone else, right? But why not release it anyways.
+
+Installation:
+You have to put the campaigner subfolder on your webserver and call the show and listen calls as described in the example
+You also need a mysql database with the structure described below. 
+You should also look at the style.css and config.php files to change the layout, the texts and the working to your needs.
+
+
+MySQL Dump:
+CREATE TABLE IF NOT EXISTS `supporter` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status` int(11) NOT NULL,
+  `timestamp` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `confirmhash` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 ;
+
+
+
+
+
+Frank karlitschek
+frank@karlitschek.de
+
+

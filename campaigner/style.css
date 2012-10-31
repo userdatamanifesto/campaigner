@@ -1,0 +1,11 @@
+.notify {font-family:Tahoma,Arial,Helvetica;font-size:14px; font-weight:bold;color:#880000;text-align:center;  margin:20px padding:20px;}
+.list li a  {font-family:Tahoma,Arial,Helvetica;font-size:14px; font-weight:normal;color:#888888;}
+
+.formbutton, .formbuttonmain, .formoption, .formcheckbox, .formradio, .formtextarea, .forminput {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.forminput    {color:#000000; font-size:8.0pt; margin:1px; padding:3px; border:1px #AAAAAA solid; background-color: #FFFFFF;}
+.formbutton   {color:#333333; font-size:8pt; margin:1px; border:1px #AAAAAA solid; background-color: #EEEEEE; font-weight:bold;}
+
