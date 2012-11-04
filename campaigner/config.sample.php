@@ -30,7 +30,7 @@
   define('CAMPAIGNER_SMTPMAILTEXT', 'Thanks a lot for supporting this website. Please click on this link to confirm your email. Your name will be listed on the website to show your support. Thanks a lot.');
 
   // Confirmation text
-  define('CAMPAIGNER_ADDTEXT', 'We send you a confirmation email. Please click on the link in the email to confirm your support.<br /><br />');
+  define('CAMPAIGNER_ADDTEXT', 'We sent you a confirmation email. Please click on the link in the email to confirm your support.<br /><br />');
 
   // 2. Confirmation text
   define('CAMPAIGNER_CONFIRMTEXT', 'Thanks a lot for confirming your email address. Your name is now listed on the website. Thanks for supporting us.<br /><br />');
