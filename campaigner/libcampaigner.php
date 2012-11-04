@@ -21,7 +21,7 @@
 
 // include phpmailer which has to be in the same folder
 require('class.phpmailer.php');
-require('config.php');
+require('../config.php');
 
 /**
  * a simple script to collect supporters of a website or statement
