@@ -83,12 +83,12 @@ class CAMPAIGNER {
 
     $output=CAMPAIGNER_ADDTEXT;
 
-    $result = CAMPAIGNER::DBselect('id from supporter where status=1 and email="'.addslashes($email).'"');
+    $result = CAMPAIGNER::DBselect('id from supporter where status=1 and email="'.mysql_real_escape_string($email).'"');
     $itemscount = CAMPAIGNER::DBnumrows($result);
     if($itemscount==0) {
 
       $hash=rand(111111,999999).rand(111111,999999).rand(111111,999999).rand(111111,999999);
-      $result = CAMPAIGNER::DBinsert('into supporter (name,email,timestamp,status,confirmhash) values ("'.addslashes($name).'","'.addslashes($email).'","'.time().'",0,"'.$hash.'") ');
+      $result = CAMPAIGNER::DBinsert('into supporter (name,email,timestamp,status,confirmhash) values ("'.mysql_real_escape_string($name).'","'.mysql_real_escape_string($email).'","'.time().'",0,"'.$hash.'") ');
       CAMPAIGNER::DBfree_result($result);
     
 
@@ -112,7 +112,7 @@ class CAMPAIGNER {
 
       $mailo->From =CAMPAIGNER_SMTPFROMEMAIL;
       $mailo->FromName = CAMPAIGNER_SMTPFROMNAME;
-      $mailo->AddAddress(addslashes($email),addslashes($name));
+      $mailo->AddAddress(mysql_real_escape_string($email),mysql_real_escape_string($name));
 
       $mailo->IsHTML(false);
 
@@ -134,7 +134,7 @@ class CAMPAIGNER {
    * returns an confirmation message
    */
   private static function confirm($hash) {
-    $result = CAMPAIGNER::DBupdate('supporter set status=1 where confirmhash="'.addslashes($hash).'" ');
+    $result = CAMPAIGNER::DBupdate('supporter set status=1 where confirmhash="'.mysql_real_escape_string($hash).'" ');
     $output=CAMPAIGNER_CONFIRMTEXT;
     return($output);
   }
