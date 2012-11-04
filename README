@@ -6,7 +6,7 @@ This is just a simple PHP module that can create a box on your website to collec
 Installation:
 You have to put the campaigner subfolder on your webserver and call the show and listen calls as described in the example
 You also need a mysql database with the structure described below. 
-You should also look at the style.css and config.php files to change the layout, the texts and the working to your needs.
+You should also look at the style.css and put a config.php file based on config.sample.php into your parent directory to change the layout, the texts and the working to your needs.
 
 
 MySQL Dump:
