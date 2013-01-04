@@ -34,10 +34,11 @@ class CAMPAIGNER {
    * html code for the supporter box including current supporters
    */
   public static function show() {
-    echo('<br /><br /><span class="related">Supporter:</span><br />');
-    echo('<ul class="list">');
     $result =CAMPAIGNER:: DBselect('id,name,timestamp from supporter where status=1 ');
     $itemscount = CAMPAIGNER::DBnumrows($result);
+    $supporterStr = ($itemscount < 1 || $itemscount == 0) ? 'Supporters' : 'Supporter';
+    echo('<br /><br /><span class="related">'.$supporterStr.'</span><br />');
+    echo('<ul class="list">');
     for ($i=0; $i < $itemscount; $i++) {
       $data = CAMPAIGNER::DBfetch_assoc($result);
       echo('<li>'.$data['name'].'</li>');
